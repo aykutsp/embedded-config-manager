@@ -208,3 +208,8 @@ gateways. Python 3.11+.
 ## License
 
 MIT. See [LICENSE](LICENSE).
+
+Feel free to use this project however you like - fork it, ship it, tear it
+apart, build something bigger on top of it. If you end up using it in
+something public, a small credit or a link back would make my day, but
+it's not a requirement. Thanks for taking a look.
