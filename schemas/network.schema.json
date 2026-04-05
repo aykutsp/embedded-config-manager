@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Network",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["interface", "dhcp"],
+  "properties": {
+    "interface": { "type": "string", "minLength": 1 },
+    "dhcp": { "type": "boolean" },
+    "static_ip": { "type": "string" },
+    "gateway": { "type": "string" },
+    "dns_primary": { "type": "string" },
+    "dns_secondary": { "type": "string" },
+    "mtu": { "type": "integer", "minimum": 576, "maximum": 9000 }
+  }
+}

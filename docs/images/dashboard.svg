@@ -1,0 +1,185 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 740" font-family="-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#0b1220"/>
+    </linearGradient>
+    <linearGradient id="ok" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#10b981"/>
+      <stop offset="1" stop-color="#34d399"/>
+    </linearGradient>
+    <linearGradient id="warn" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#f59e0b"/>
+      <stop offset="1" stop-color="#fbbf24"/>
+    </linearGradient>
+  </defs>
+
+  <!-- window chrome -->
+  <rect width="1200" height="740" rx="10" fill="url(#bg)"/>
+  <rect x="0" y="0" width="1200" height="38" rx="10" fill="#0b1220"/>
+  <rect x="0" y="28" width="1200" height="10" fill="#0b1220"/>
+  <circle cx="22" cy="19" r="6" fill="#ef4444"/>
+  <circle cx="42" cy="19" r="6" fill="#f59e0b"/>
+  <circle cx="62" cy="19" r="6" fill="#10b981"/>
+  <text x="600" y="24" text-anchor="middle" fill="#64748b" font-size="12">embedded-config-manager · gateway-03.lan</text>
+
+  <!-- sidebar -->
+  <rect x="0" y="38" width="220" height="702" fill="#0b1324"/>
+  <text x="24" y="78" fill="#e2e8f0" font-size="15" font-weight="700">● ConfigBox</text>
+  <text x="24" y="96" fill="#475569" font-size="10">v0.1 · local</text>
+
+  <g font-size="13" fill="#94a3b8">
+    <rect x="12" y="120" width="196" height="34" rx="6" fill="#1e293b"/>
+    <text x="28" y="141" fill="#e2e8f0" font-weight="600">Dashboard</text>
+    <text x="28" y="179">Config Editor</text>
+    <text x="28" y="213">Revisions</text>
+    <text x="28" y="247">Diff Viewer</text>
+    <text x="28" y="281">Apply Center</text>
+    <text x="28" y="315">Rollback</text>
+    <text x="28" y="349">Audit Log</text>
+    <text x="28" y="383">Services</text>
+    <text x="28" y="417">Schemas</text>
+  </g>
+  <text x="24" y="705" fill="#475569" font-size="11">admin · LAN only</text>
+
+  <!-- top bar -->
+  <text x="250" y="78" fill="#f1f5f9" font-size="22" font-weight="700">Dashboard</text>
+  <text x="250" y="98" fill="#64748b" font-size="12">Current state of this device</text>
+  <rect x="1000" y="64" width="170" height="34" rx="6" fill="#1e293b" stroke="#334155"/>
+  <text x="1018" y="85" fill="#94a3b8" font-size="12">⟳  Refresh status</text>
+
+  <!-- row 1: 4 cards -->
+  <g>
+    <rect x="250" y="120" width="215" height="108" rx="8" fill="#111c33" stroke="#1f2a44"/>
+    <text x="266" y="144" fill="#64748b" font-size="11" font-weight="600">ACTIVE REVISION</text>
+    <text x="266" y="176" fill="#f1f5f9" font-size="22" font-weight="700">r-1042</text>
+    <text x="266" y="198" fill="#94a3b8" font-size="11">applied 2h ago · admin</text>
+    <text x="266" y="214" fill="#10b981" font-size="11">● healthy</text>
+
+    <rect x="475" y="120" width="215" height="108" rx="8" fill="#111c33" stroke="#1f2a44"/>
+    <text x="491" y="144" fill="#64748b" font-size="11" font-weight="600">PENDING REVISION</text>
+    <text x="491" y="176" fill="#f1f5f9" font-size="22" font-weight="700">r-1043</text>
+    <text x="491" y="198" fill="#94a3b8" font-size="11">validated · 3 modules changed</text>
+    <rect x="491" y="204" width="78" height="18" rx="9" fill="url(#warn)"/>
+    <text x="530" y="217" text-anchor="middle" fill="#0b1220" font-size="10" font-weight="700">AWAITING APPLY</text>
+
+    <rect x="700" y="120" width="215" height="108" rx="8" fill="#111c33" stroke="#1f2a44"/>
+    <text x="716" y="144" fill="#64748b" font-size="11" font-weight="600">LAST APPLY</text>
+    <text x="716" y="176" fill="#f1f5f9" font-size="22" font-weight="700">success</text>
+    <text x="716" y="198" fill="#94a3b8" font-size="11">r-1042 · 4 steps · 1.8s</text>
+    <text x="716" y="214" fill="#10b981" font-size="11">● health checks passed</text>
+
+    <rect x="925" y="120" width="245" height="108" rx="8" fill="#111c33" stroke="#1f2a44"/>
+    <text x="941" y="144" fill="#64748b" font-size="11" font-weight="600">LAST ROLLBACK</text>
+    <text x="941" y="176" fill="#f1f5f9" font-size="22" font-weight="700">r-1039 → r-1038</text>
+    <text x="941" y="198" fill="#94a3b8" font-size="11">3 days ago · auto · VPN down</text>
+    <text x="941" y="214" fill="#64748b" font-size="11">recovered to last-known-good</text>
+  </g>
+
+  <!-- row 2: services -->
+  <rect x="250" y="248" width="595" height="332" rx="8" fill="#111c33" stroke="#1f2a44"/>
+  <text x="266" y="276" fill="#f1f5f9" font-size="14" font-weight="700">Service Health</text>
+  <text x="266" y="292" fill="#64748b" font-size="11">managed by apply hooks · 6 services</text>
+
+  <g font-size="12">
+    <!-- headers -->
+    <text x="266" y="318" fill="#475569" font-size="10" font-weight="700">SERVICE</text>
+    <text x="486" y="318" fill="#475569" font-size="10" font-weight="700">STATE</text>
+    <text x="596" y="318" fill="#475569" font-size="10" font-weight="700">LAST RELOAD</text>
+    <text x="750" y="318" fill="#475569" font-size="10" font-weight="700">SOURCE</text>
+    <line x1="266" y1="326" x2="830" y2="326" stroke="#1f2a44"/>
+
+    <!-- rows -->
+    <g fill="#e2e8f0">
+      <text x="266" y="352">networkd</text>
+      <circle cx="492" cy="348" r="4" fill="#10b981"/><text x="502" y="352" fill="#10b981">active</text>
+      <text x="596" y="352" fill="#94a3b8">2h ago</text>
+      <text x="750" y="352" fill="#64748b">network.yaml</text>
+
+      <text x="266" y="378">wpa_supplicant</text>
+      <circle cx="492" cy="374" r="4" fill="#10b981"/><text x="502" y="378" fill="#10b981">active</text>
+      <text x="596" y="378" fill="#94a3b8">2h ago</text>
+      <text x="750" y="378" fill="#64748b">wifi.conf</text>
+
+      <text x="266" y="404">openvpn@gw</text>
+      <circle cx="492" cy="400" r="4" fill="#10b981"/><text x="502" y="404" fill="#10b981">active</text>
+      <text x="596" y="404" fill="#94a3b8">2h ago</text>
+      <text x="750" y="404" fill="#64748b">vpn.conf</text>
+
+      <text x="266" y="430">sensor-agent</text>
+      <circle cx="492" cy="426" r="4" fill="#10b981"/><text x="502" y="430" fill="#10b981">active</text>
+      <text x="596" y="430" fill="#94a3b8">2h ago</text>
+      <text x="750" y="430" fill="#64748b">io.yaml</text>
+
+      <text x="266" y="456">telemetry-agent</text>
+      <circle cx="492" cy="452" r="4" fill="#f59e0b"/><text x="502" y="456" fill="#f59e0b">reloading</text>
+      <text x="596" y="456" fill="#94a3b8">12s ago</text>
+      <text x="750" y="456" fill="#64748b">telemetry.env</text>
+
+      <text x="266" y="482">config-agent</text>
+      <circle cx="492" cy="478" r="4" fill="#10b981"/><text x="502" y="482" fill="#10b981">active</text>
+      <text x="596" y="482" fill="#94a3b8">running</text>
+      <text x="750" y="482" fill="#64748b">self</text>
+    </g>
+  </g>
+
+  <!-- quick actions -->
+  <text x="266" y="526" fill="#475569" font-size="10" font-weight="700">QUICK ACTIONS</text>
+  <rect x="266" y="534" width="128" height="34" rx="6" fill="url(#ok)"/>
+  <text x="330" y="556" text-anchor="middle" fill="#052e1a" font-size="12" font-weight="700">Apply r-1043</text>
+  <rect x="404" y="534" width="128" height="34" rx="6" fill="#1e293b" stroke="#334155"/>
+  <text x="468" y="556" text-anchor="middle" fill="#e2e8f0" font-size="12">View diff</text>
+  <rect x="542" y="534" width="128" height="34" rx="6" fill="#1e293b" stroke="#334155"/>
+  <text x="606" y="556" text-anchor="middle" fill="#e2e8f0" font-size="12">Rollback</text>
+
+  <!-- row 3: recent changes -->
+  <rect x="855" y="248" width="315" height="332" rx="8" fill="#111c33" stroke="#1f2a44"/>
+  <text x="871" y="276" fill="#f1f5f9" font-size="14" font-weight="700">Recent Revisions</text>
+  <text x="871" y="292" fill="#64748b" font-size="11">last 5 changes</text>
+
+  <g font-size="11">
+    <g transform="translate(871,316)">
+      <circle cx="6" cy="6" r="4" fill="#f59e0b"/>
+      <text x="18" y="10" fill="#e2e8f0" font-weight="600">r-1043 · pending</text>
+      <text x="18" y="26" fill="#64748b">Increase sensor poll · admin</text>
+    </g>
+    <g transform="translate(871,368)">
+      <circle cx="6" cy="6" r="4" fill="#10b981"/>
+      <text x="18" y="10" fill="#e2e8f0" font-weight="600">r-1042 · active</text>
+      <text x="18" y="26" fill="#64748b">Add DNS fallback · admin</text>
+    </g>
+    <g transform="translate(871,420)">
+      <circle cx="6" cy="6" r="4" fill="#10b981"/>
+      <text x="18" y="10" fill="#e2e8f0" font-weight="600">r-1041 · applied</text>
+      <text x="18" y="26" fill="#64748b">VPN endpoint migration · ops</text>
+    </g>
+    <g transform="translate(871,472)">
+      <circle cx="6" cy="6" r="4" fill="#ef4444"/>
+      <text x="18" y="10" fill="#e2e8f0" font-weight="600">r-1040 · rolled back</text>
+      <text x="18" y="26" fill="#64748b">Bad WAN gateway · auto-revert</text>
+    </g>
+    <g transform="translate(871,524)">
+      <circle cx="6" cy="6" r="4" fill="#10b981"/>
+      <text x="18" y="10" fill="#e2e8f0" font-weight="600">r-1039 · applied</text>
+      <text x="18" y="26" fill="#64748b">Hostname change · admin</text>
+    </g>
+  </g>
+
+  <!-- footer strip -->
+  <rect x="250" y="600" width="920" height="110" rx="8" fill="#111c33" stroke="#1f2a44"/>
+  <text x="266" y="628" fill="#f1f5f9" font-size="14" font-weight="700">Apply Pipeline — r-1042</text>
+  <text x="266" y="646" fill="#64748b" font-size="11">success · 1.8s total</text>
+
+  <g font-size="10">
+    <rect x="266" y="664" width="150" height="32" rx="4" fill="#0b2a1e" stroke="#10b981"/>
+    <text x="341" y="684" text-anchor="middle" fill="#34d399" font-weight="700">✓ validate (120ms)</text>
+    <rect x="426" y="664" width="150" height="32" rx="4" fill="#0b2a1e" stroke="#10b981"/>
+    <text x="501" y="684" text-anchor="middle" fill="#34d399" font-weight="700">✓ backup (80ms)</text>
+    <rect x="586" y="664" width="150" height="32" rx="4" fill="#0b2a1e" stroke="#10b981"/>
+    <text x="661" y="684" text-anchor="middle" fill="#34d399" font-weight="700">✓ render + write</text>
+    <rect x="746" y="664" width="170" height="32" rx="4" fill="#0b2a1e" stroke="#10b981"/>
+    <text x="831" y="684" text-anchor="middle" fill="#34d399" font-weight="700">✓ reload services</text>
+    <rect x="926" y="664" width="230" height="32" rx="4" fill="#0b2a1e" stroke="#10b981"/>
+    <text x="1041" y="684" text-anchor="middle" fill="#34d399" font-weight="700">✓ health checks (1.4s)</text>
+  </g>
+</svg>

@@ -1,0 +1,22 @@
+{
+  "system": {
+    "hostname": "gateway-01",
+    "timezone": "UTC",
+    "ntp_servers": ["pool.ntp.org"]
+  },
+  "network": {
+    "interface": "eth0",
+    "dhcp": false,
+    "static_ip": "192.168.1.10",
+    "gateway": "192.168.1.1",
+    "dns_primary": "1.1.1.1",
+    "dns_secondary": "8.8.8.8",
+    "mtu": 1500
+  },
+  "telemetry": {
+    "endpoint": "https://telemetry.example.com/ingest",
+    "interval_seconds": 60,
+    "batch_size": 100,
+    "enabled": true
+  }
+}

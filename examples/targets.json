@@ -1,0 +1,18 @@
+{
+  "targets": [
+    {
+      "name": "telemetry",
+      "template": "env/telemetry.env.j2",
+      "output": "/etc/telemetry/config.env",
+      "reload": "systemctl reload telemetry-agent",
+      "health": "test -f /etc/telemetry/config.env"
+    },
+    {
+      "name": "network",
+      "template": "env/network.env.j2",
+      "output": "/etc/network/interfaces.d/ecm.conf",
+      "reload": "systemctl restart networkd",
+      "health": "ip link show"
+    }
+  ]
+}
