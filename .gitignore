@@ -23,9 +23,9 @@ __pycache__/
 .eggs/
 build/
 dist/
-.venv/
-venv/
-env/
+/.venv/
+/venv/
+/env/
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
