@@ -7,7 +7,6 @@ the same service against an isolated temp directory.
 
 from __future__ import annotations
 
-from pathlib import Path
 from typing import Any
 
 from agent.apply.engine import ApplyEngine, ApplyResult

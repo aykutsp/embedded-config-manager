@@ -11,10 +11,11 @@ from __future__ import annotations
 import hashlib
 import json
 import sqlite3
+from collections.abc import Iterator
 from contextlib import contextmanager
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
-from typing import Any, Iterator
+from typing import Any
 
 from agent.core.errors import NoActiveRevisionError, RevisionNotFoundError
 from agent.core.models import (
@@ -71,7 +72,7 @@ CREATE INDEX IF NOT EXISTS idx_revisions_created ON revisions(created_at DESC);
 
 
 def _utcnow_iso() -> str:
-    return datetime.now(timezone.utc).isoformat()
+    return datetime.now(UTC).isoformat()
 
 
 def checksum_config(config: dict[str, Any]) -> str:

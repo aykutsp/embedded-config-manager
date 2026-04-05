@@ -2,6 +2,12 @@
 
 Versioned configuration management for Linux-based embedded devices.
 
+[![CI](https://github.com/aykutsp/embedded-config-manager/actions/workflows/ci.yml/badge.svg)](https://github.com/aykutsp/embedded-config-manager/actions/workflows/ci.yml)
+[![Python](https://img.shields.io/badge/python-3.11%2B-blue)](https://www.python.org/)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![Code style: ruff](https://img.shields.io/badge/lint-ruff-261230.svg)](https://github.com/astral-sh/ruff)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.110%2B-009688.svg)](https://fastapi.tiangolo.com/)
+
 ![Dashboard preview](docs/images/dashboard.png)
 
 This is a local-first config control plane for edge gateways, industrial

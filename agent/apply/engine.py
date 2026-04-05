@@ -24,7 +24,6 @@ import subprocess
 import time
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Any
 
 from agent.core.errors import ApplyError, HealthCheckError, ValidationError
 from agent.core.models import ApplyStep, Revision
